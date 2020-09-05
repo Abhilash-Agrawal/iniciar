@@ -1,0 +1,146 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #dedede;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-head {
+  font-size: 45px;
+    font-weight: 700;
+    display: flex;
+    padding-left: 20px;
+}
+
+.grid-container {
+  /* display: grid;
+  grid-template-columns: 20% 80%; */
+  background-color: #dedede;
+  padding: 15px;
+  padding-top: 5px;
+  height: 100vh;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.program-column{
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+
+.programs-container{
+  /* display: grid; */
+  /* grid-template-columns: 25% 25% 25% 25%; */
+  /* grid-template-rows: 500px; */
+  background-color: #dedede;
+}
+
+.programs-item {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  height: 65vh;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.program-image{
+  width: 100%;
+    display: block;
+    height: auto;
+    background-color: #dedede;
+}
+
+.is-primary {
+  grid-template-columns: auto auto;
+  display: grid;
+  text-align: center;
+  row-gap: 25px;
+  column-gap: 20%;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.line { 
+  width: 75%;
+}
+
+.filter {
+  height: max-content;
+}
+
+@media screen and (min-width: 1440px) {
+  .XT-PS {
+    text-align: center;
+  }
+
+  .xt-div {
+    display: inline-block;
+  }
+/* 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    max-width: 1440px;
+  }
+
+  .programs-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  } */
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    max-width: 1440px;
+  }
+
+  .programs-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+  .programs-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+
+  
+}
