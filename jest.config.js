@@ -17,4 +17,7 @@ module.exports = {
   moduleNameMapper: {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
   },
+  setupFilesAfterEnv: [
+    '<rootDir>/setupTests.js',
+  ],
 };
