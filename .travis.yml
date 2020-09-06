@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - 12
+cache:
+  yarn: true
+  directories:
+    - node_modules
+env:
+  - CI=true
+jobs:
+  include:
+    - stage: 'Tests'
+      name: 'ES Lint'
+      script: yarn test:lint:js
+    - name: 'Unit Test Execution'
+      script: yarn test
+    - stage: deployment
+      name: 'Deploy artifacts to Heroku'
+      before_deploy:
+        - yarn build
+      deploy:
+        provider: heroku
+        app: ps-space
+        api_key:
+          secure: d77d985d-f448-410e-9f94-a0e04a8c8f68
+        on:
+          branch: master
