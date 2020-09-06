@@ -4,18 +4,14 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import ProgramList from '../components/ProgramList';
 import Filter from '../components/Filter';
+import * as constants from '../constants/constants';
 
 const Index = ({ data, params }) => {
   const router = useRouter();
   const [launchYear, setLaunchYear] = useState();
   const [launchSuccess, setLaunchSuccess] = useState();
   const [landSuccess, setLandSuccess] = useState();
-  // const [programs, setPrograms] = useState(data);
-  // const [params, setParams] = useState(params);
 
-  // useEffect(() => {
-  //   loadParams();
-  // }, [params]);
   const loadParams = (key, value) => {
     router.push({
       pathname: '/',
@@ -42,10 +38,10 @@ const Index = ({ data, params }) => {
 
   return (
     <div className="xt-div">
-      <span className="app-head">
-        Space X Launch programs
-      </span>
-      <div className="grid-container">
+      <header className="app-head">
+        Space X Launch Programs
+      </header>
+      <section className="grid-container">
         <Filter
           className="grid-item filter"
           launchSuccess={launchSuccess}
@@ -59,7 +55,12 @@ const Index = ({ data, params }) => {
           className="grid-item program-column"
           programs={data}
         />
-      </div>
+      </section>
+      <footer className="footer">
+        <span className="footer-text">
+          <b>Developed by:</b> {constants.DEVELOPER_NAME}
+        </span>
+      </footer>
     </div>
   );
 };

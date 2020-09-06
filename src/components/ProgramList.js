@@ -6,7 +6,7 @@ const ProgramList = ({ programs }) => (
   <div className=".grid-item programs-container">
     {programs && programs.length > 0
       ? (programs.map((program) => (
-        <ProgramListItem key={program.mission_name} program={program} />
+        program ? <ProgramListItem key={program.mission_name} program={program} /> : ''
       )))
       : <span>No programs found</span>}
   </div>

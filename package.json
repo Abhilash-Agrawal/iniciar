@@ -4,23 +4,32 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "heroku-postbuild": "next build",
-    "start": "next start -p $PORT"
+    "build": "next build",
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "next": "9.5.2",
+    "next-babel-minify": "^1.0.0",
+    "prop-types": "^15.7.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "prop-types": "^15.7.2"
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@testing-library/dom": "^6.5.1",
+    "@testing-library/jest-dom": "^5.1.0",
+    "@testing-library/react": "^9.1.4",
+    "@testing-library/user-event": "^7.0.1",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^24.8.0",
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^4.1.0"
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "jest": "^24.8.0",
+    "jest-enzyme": "^7.0.2"
   }
 }

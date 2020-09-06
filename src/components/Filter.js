@@ -4,30 +4,29 @@ import LaunchYearFilter from './LaunchYearFilter';
 import LaunchSuccessFilter from './LaunchSuccessFilter';
 import LandSuccessFilter from './LandSuccessFilter';
 import * as constants from '../constants/constants';
-import styles from './Filter.module.css';
 
 const Filter = ({
   className, launchYear, launchSuccess, landSuccess, onLandSuccessChange,
   onLaunchSuccessChange, onLaunchYearChange,
 }) => (
   <div className={className}>
-    <span className="app-head">
+    <span className="app-head filter-head">
       Filters
     </span>
     <LaunchYearFilter
-      className={styles.filterDiv}
+      className="filterDiv"
       title={constants.LAUNCH_YEAR}
       launchYear={launchYear}
       onLaunchYearChange={onLaunchYearChange}
     />
     <LaunchSuccessFilter
-      className={styles.filterDiv}
+      className="filterDiv"
       title={constants.SUCCESSFUL_LAUNCH}
       launchYear={launchSuccess}
       onLaunchSuccessChange={onLaunchSuccessChange}
     />
     <LandSuccessFilter
-      className={styles.filterDiv}
+      className="filterDiv"
       title={constants.SUCCESSFUL_LAND}
       launchYear={landSuccess}
       onLandSuccessChange={onLandSuccessChange}
