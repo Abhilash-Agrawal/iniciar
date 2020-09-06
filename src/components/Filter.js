@@ -11,7 +11,7 @@ const Filter = ({
 }) => (
   <div className={className}>
     <span className="app-head filter-head">
-      Filters
+      Filter
     </span>
     <LaunchYearFilter
       className="filterDiv"
